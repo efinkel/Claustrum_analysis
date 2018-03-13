@@ -8,7 +8,16 @@ import matplotlib.pylab as mpl
 from IPython.html import widgets
 from IPython.display import display
 
-def plot_unit(df_dict, s_key, n, x_min, x_max):
+font = {'family' : 'sans-serif',
+        'weight' : 'normal',
+        'size'   : 24}
+
+mpl.rc('font', **font)
+mpl.rc('xtick', labelsize=20) 
+mpl.rc('ytick', labelsize=20)
+mpl.rc('axes', labelsize=20)
+
+def plot_unit(df_dict, s_key, alignment, n, x_min, x_max):
 	if s_key == 0:
 		print('0')
 		return
@@ -36,6 +45,6 @@ def plot_unit(df_dict, s_key, n, x_min, x_max):
 		
 		import rasters_and_psth as r
 		rasters = [cell_VT, cell_TT, cell_TV, cell_VV]
-		fig = r.plot_rasters(rasters, [x_min, x_max], 0.02)
+		fig = r.plot_rasters(rasters, [x_min, x_max], 0.05, alignment)[0]
 		
 		return fig
