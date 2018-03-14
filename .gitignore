@@ -1,3 +1,5 @@
 *
 !*.ipynb
 !*py
+!utils
+!all_opto*
