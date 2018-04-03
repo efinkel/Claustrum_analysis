@@ -113,8 +113,8 @@ def calc_spike_stats(log_df, unit_key_df, uni_id, bin_size):
 	
 def calc_lick_stats(log_df, afunc, trial_types, col_names):
 
-	stat_table = pd.pivot_table(log_df, values = 'first_lick', columns = ['uni_id','trial_type'], aggfunc = afunc)
-	trial_stats = {col_names[i] : stat_table[:,trial_types[i]].values for i in range(len(trial_types))}
+	stat_table = pd.pivot_table(log_df, values = 'first_lick', index = ['trial_type', 'uni_id'], aggfunc = afunc)
+	trial_stats = {col_names[i] : np.concatenate(stat_table.loc[trial_types[i]].values) for i in range(len(trial_types))}
 	ts_df = pd.DataFrame(trial_stats)
     
 	return ts_df
