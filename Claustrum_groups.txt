@@ -1,0 +1,5 @@
+group1: just neurons from tetrode 6(burned tetrode) from each mouse that were also tagged
+group2: neurons on tetrode 6 from each mouse that were not tagged from days where there was a tagged neuron on tetrode 6
+group3: all tagged neurons
+group4: same as group2 but using group3 as starters.
+group5: claustrum6- 10/30/17, 10/31/17, 11/01-11/03, 11/06/17 -> negative neurons

@@ -1,0 +1,7 @@
+To do:
+
+-Lick aligned window mean firing rate - comparing lick right/left/no-lick pairwise comparison
+-stimulus period window - compare touch vs visual trials vs baseline - rank sum stat test
+-baseline window comparing block
+
+-largest windows that at the same time wont obscure variability
